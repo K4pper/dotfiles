@@ -132,7 +132,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/Users/kath/go/bin
 export EDITOR=/opt/homebrew/bin/nvim
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export PATH=$PATH:/nix/var/nix/profiles/default/bin/
 export JAVA_HOME="/opt/homebrew/Cellar/openjdk/21.0.2"
 
 # Generated for envman. Do not edit.
