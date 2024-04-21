@@ -1,0 +1,16 @@
+[includeIf "gitdir:~/.git/work/"]
+	path = ~/.git/work/.gitconfig
+
+[includeIf "gitdir:~/.git/personal/"]
+	path = ~/.git/personal/.gitconfig
+
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Kasper Therkelsen
+	email = kasper@kaspertherkelsen.com
+	signingkey = .ssh/id_rsa.pub
+[pull]
+	rebase = true
+[gpg]
+	format = ssh
