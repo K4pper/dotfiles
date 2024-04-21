@@ -12,5 +12,3 @@
 	signingkey = .ssh/id_rsa.pub
 [pull]
 	rebase = true
-[gpg]
-	format = ssh
