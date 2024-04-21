@@ -139,4 +139,4 @@ export JAVA_HOME="/opt/homebrew/Cellar/openjdk/21.0.2"
 
 # Rust
 source "$HOME/.cargo/env"
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
