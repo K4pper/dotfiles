@@ -6,11 +6,12 @@ fpath+=($HOME/.config/zsh/pure)
 autoload -U promptinit; promptinit
 prompt pure
 
-
+# Alias
 alias vim="nvim"
 alias lg="lazygit"
 alias ls="eza"
 
+# Path
 export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
 
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
@@ -26,9 +27,11 @@ alias k="kubectl"
 
 # GO
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/Users/kath/.config/go/bin
 
-# NVIM
+# Rust
+source "$HOME/.config/.cargo/env"
+
+# Editor
 export EDITOR=/opt/homebrew/bin/nvim
 
 # JAVA
@@ -37,19 +40,9 @@ export JAVA_HOME="/opt/homebrew/Cellar/openjdk/21.0.2"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-
-# Rust
-source "$HOME/.config/.cargo/env"
-export CARGO_HOME="$HOME/.config/.cargo"
-export RUSTUP_HOME="$HOME/.config/.rustup"
-
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
-# Azure CLI
-export AZURE_CONFIG_DIR="$HOME/.config/.azure"
-
-export GNUPGHOME="$HOME/.config/gnupg"
 
 # Plugins
 source "$HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
