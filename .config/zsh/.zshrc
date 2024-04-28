@@ -1,10 +1,16 @@
+# Basic auto/tab complete
 autoload -Uz compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
 compinit
+_comp_options+=(globdots) # Include hidden files
+
 
 fpath+=($HOME/.config/zsh/pure)
 
 autoload -U promptinit; promptinit
 prompt pure
+
 
 # Alias
 alias vim="nvim"
@@ -12,12 +18,12 @@ alias lg="lazygit"
 alias ls="eza"
 
 # Path
-export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/home/kapper/.local/bin
 
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+#[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # brew Shell Completion
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+# FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # Kubernetes
 export KUBECONFIG=./kubeconfig
@@ -42,6 +48,10 @@ export JAVA_HOME="/opt/homebrew/Cellar/openjdk/21.0.2"
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+# NodeJS
+export NVM_DIR="$HOME/.config/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
 # Plugins
