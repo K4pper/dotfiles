@@ -5,7 +5,10 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # Include hidden files
 
+# Turn off all beeps
+unsetopt BEEP
 
+# Pure
 fpath+=($HOME/.config/zsh/pure)
 
 autoload -U promptinit; promptinit
