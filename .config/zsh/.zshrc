@@ -20,10 +20,10 @@ alias ls="eza"
 # Path
 export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/home/kapper/.local/bin
 
-#[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # brew Shell Completion
-# FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # Kubernetes
 export KUBECONFIG=./kubeconfig
