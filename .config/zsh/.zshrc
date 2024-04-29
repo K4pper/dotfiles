@@ -21,7 +21,7 @@ alias lg="lazygit"
 alias ls="eza"
 
 # Path
-export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/home/kapper/.local/bin
+export PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/home/kapper/.local/bin:/opt/homebrew/bin
 
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
