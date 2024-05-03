@@ -3,12 +3,12 @@ $username\
 $hostname\
 $directory\
 $git_branch\
-$kubernetes\
 $git_state\
 $git_status\
 $cmd_duration\
-$line_break\
+$kubernetes\
 $python\
+$line_break\
 $character"""
 
 [directory]
