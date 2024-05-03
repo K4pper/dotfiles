@@ -3,6 +3,7 @@ $username\
 $hostname\
 $directory\
 $git_branch\
+$kubernetes\
 $git_state\
 $git_status\
 $cmd_duration\
@@ -44,3 +45,8 @@ style = "yellow"
 [python]
 format = "[$virtualenv]($style) "
 style = "bright-black"
+
+[kubernetes]
+format = '[$symbol(\($namespace\))]($style)'
+disabled = false
+style = "blue"
