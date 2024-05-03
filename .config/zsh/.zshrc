@@ -9,13 +9,6 @@ _comp_options+=(globdots) # Include hidden files
 # Turn off all beeps
 unsetopt BEEP
 
-# Pure
-fpath+=($HOME/.config/zsh/pure)
-
-autoload -U promptinit; promptinit
-prompt pure
-
-
 # Alias
 alias vim="nvim"
 alias lg="lazygit"
@@ -31,7 +24,7 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # Kubernetes
 export KUBECONFIG=./kubeconfig
-export PATH="${KREW_ROOT:-$HOME/.config/.krew}/bin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 source <(kubectl completion zsh)
 alias k="kubectl"
 
@@ -56,6 +49,10 @@ eval "$(zoxide init --cmd cd zsh)"
 # NodeJS
 export NVM_DIR="$HOME/.config/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+# Starship
+eval "$(starship init zsh)"
 
 
 # Plugins
