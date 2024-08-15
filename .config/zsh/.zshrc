@@ -6,6 +6,9 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # Include hidden files
 
+# Enable bash completion
+autoload -U +X bashcompinit && bashcompinit
+
 # Turn off all beeps
 unsetopt BEEP
 
@@ -58,3 +61,4 @@ eval "$(starship init zsh)"
 # Plugins
 source "$HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOME/.config/zsh/azure-cli.zsh/azure-cli.plugin.zsh"
