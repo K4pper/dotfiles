@@ -27,8 +27,7 @@ save_to_clipboard = true
 
 [window]
 title = "Alacritty"
-opacity = 0.8
-option_as_alt = "OnlyRight"
+option_as_alt = "Both"
 
 [colors.primary]
 background = "#24283b"
