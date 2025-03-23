@@ -6,8 +6,6 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # Include hidden files
 
-# Enable bash completion
-autoload -U +X bashcompinit && bashcompinit
 
 # Turn off all beeps
 unsetopt BEEP
@@ -57,6 +55,9 @@ export NVM_DIR="$HOME/.config/.nvm"
 # Starship
 eval "$(starship init zsh)"
 
+# Enable bash completion
+autoload -U +X bashcompinit && bashcompinit
+source $(brew --prefix)/etc/bash_completion.d/az
 
 # Plugins
 source "$HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
